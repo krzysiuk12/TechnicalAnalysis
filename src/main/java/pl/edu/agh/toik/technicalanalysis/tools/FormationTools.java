@@ -33,7 +33,25 @@ public class FormationTools {
                 isLowerThan(previousCandle.getOpeningPrice(), nextCandle.getClosingPrice()) &&
                 isGreaterThan(previousCandle.getClosingPrice(), nextCandle.getOpeningPrice());
     }
-
-
+    
+    private static boolean isBullishKickerPattern(Candle candle1, Candle candle2, Candle candle3, Candle candle4) {
+    	return	candle1.getColor() == CandleColor.BLACK && candle2.getColor() == CandleColor.BLACK &&
+    			candle3.getColor() == CandleColor.BLACK && candle4.getColor() == CandleColor.WHITE &&
+    			isGreaterThan(candle1.getClosingPrice(), candle2.getOpeningPrice()) &&
+    			isGreaterThan(candle2.getClosingPrice(), candle3.getOpeningPrice()) &&
+    			isLowerThan(candle3.getClosingPrice(), candle4.getOpeningPrice()) &&
+    			isLowerThan(candle3.getOpeningPrice(), candle4.getClosingPrice()) &&
+    			isGreaterThan(candle1.getOpeningPrice(), candle4.getClosingPrice());
+    }
+    
+    private static boolean isBearishKickerPattern(Candle candle1, Candle candle2, Candle candle3, Candle candle4) {
+    	return	candle1.getColor() == CandleColor.WHITE && candle2.getColor() == CandleColor.WHITE &&
+    			candle3.getColor() == CandleColor.WHITE && candle4.getColor() == CandleColor.BLACK &&
+    			isGreaterThan(candle1.getOpeningPrice(), candle2.getClosingPrice()) &&
+    			isGreaterThan(candle2.getOpeningPrice(), candle3.getClosingPrice()) &&
+    			isLowerThan(candle3.getOpeningPrice(), candle4.getClosingPrice()) &&
+    			isLowerThan(candle3.getClosingPrice(), candle4.getOpeningPrice()) &&
+    			isGreaterThan(candle1.getClosingPrice(), candle4.getOpeningPrice());
+    }
 
 }
