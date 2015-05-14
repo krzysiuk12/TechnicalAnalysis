@@ -13,12 +13,33 @@ import java.util.Date;
  */
 public class Candle {
 
+    /**
+     * Maximal stock price
+     */
     private BigDecimal maxPrice;
+    /**
+     * Minimal stock price
+     */
     private BigDecimal minPrice;
+    /**
+     * Opening stock price
+     */
     private BigDecimal openingPrice;
+    /**
+     * Closing stock price
+     */
     private BigDecimal closingPrice;
+    /**
+     * Date (accurate to day) that candle represents data for
+     */
     private Date date;
+    /**
+     * Candle color (BLACK/WHITE/NOT_DEFINED)
+     */
     private CandleColor color;
+    /**
+     * Candle type
+     */
     private CandleType type;
 
     public Candle() {

@@ -8,14 +8,28 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * Class represents a financial chart used to describe price movements based on candles and formations.
+ *
  * Created by Krzysztof Kicinger on 2015-05-14.
  */
 public class CandlestickChart {
 
     private ListedCompany listedCompany;
+    /**
+     * List of candles that particular chart displays
+     */
     private List<Candle> candles;
+    /**
+     * Formations adjusted to candles
+     */
     private List<Formation> formations;
+    /**
+     * First date that chart contains data for (accurate to day)
+     */
     private Date startDate;
+    /**
+     * Last date that chart contains data for (accurate to day)
+     */
     private Date endDate;
 
     public CandlestickChart() {

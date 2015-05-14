@@ -1,6 +1,8 @@
 package pl.edu.agh.toik.technicalanalysis.domain;
 
 /**
+ * Class represents a company whose shares are bought and sold on a stock market.
+ *
  * Created by Krzysztof Kicinger on 2015-05-14.
  */
 public class ListedCompany {

@@ -1,6 +1,8 @@
 package pl.edu.agh.toik.technicalanalysis.domain;
 
 /**
+ * Enumeration represents type of formation.
+ *
  * Created by Krzysztof Kicinger on 2015-05-10.
  */
 public enum FormationType {
