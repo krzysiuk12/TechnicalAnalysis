@@ -3,14 +3,23 @@ package pl.edu.agh.toik.technicalanalysis.tools;
 import pl.edu.agh.toik.technicalanalysis.domain.Candle;
 import pl.edu.agh.toik.technicalanalysis.domain.CandleColor;
 import pl.edu.agh.toik.technicalanalysis.domain.CandleType;
-import static pl.edu.agh.toik.technicalanalysis.tools.CandleTools.*;
+import pl.edu.agh.toik.technicalanalysis.domain.Formation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static pl.edu.agh.toik.technicalanalysis.tools.CandleTools.isGreaterThan;
+import static pl.edu.agh.toik.technicalanalysis.tools.CandleTools.isLowerThan;
 
 /**
  * Created by Krzysztof Kicinger on 2015-05-10.
  */
 public class FormationTools {
 
-
+    public static List<Formation> getFormations(List<Candle> candles) {
+        //TODO: IMPLIEMENT IT!!!! :D :D :D
+        return new ArrayList<Formation>();
+    }
 
     private static boolean isHossaReversion(Candle candle) {
         return (candle.getType() == CandleType.LONG_CORPS && candle.getColor() == CandleColor.WHITE) ||

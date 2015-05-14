@@ -13,13 +13,16 @@ import java.util.Date;
  */
 public class Candle {
 
-    private final BigDecimal maxPrice;
-    private final BigDecimal minPrice;
-    private final BigDecimal openingPrice;
-    private final BigDecimal closingPrice;
-    private final Date date;
-    private final CandleColor color;
-    private final CandleType type;
+    private BigDecimal maxPrice;
+    private BigDecimal minPrice;
+    private BigDecimal openingPrice;
+    private BigDecimal closingPrice;
+    private Date date;
+    private CandleColor color;
+    private CandleType type;
+
+    public Candle() {
+    }
 
     public Candle(BigDecimal maxPrice, BigDecimal minPrice, BigDecimal openingPrice, BigDecimal closingPrice, Date date) {
         this.maxPrice = maxPrice;
@@ -35,27 +38,55 @@ public class Candle {
         return maxPrice;
     }
 
+    public void setMaxPrice(BigDecimal maxPrice) {
+        this.maxPrice = maxPrice;
+    }
+
     public BigDecimal getMinPrice() {
         return minPrice;
+    }
+
+    public void setMinPrice(BigDecimal minPrice) {
+        this.minPrice = minPrice;
     }
 
     public BigDecimal getOpeningPrice() {
         return openingPrice;
     }
 
+    public void setOpeningPrice(BigDecimal openingPrice) {
+        this.openingPrice = openingPrice;
+    }
+
     public BigDecimal getClosingPrice() {
         return closingPrice;
+    }
+
+    public void setClosingPrice(BigDecimal closingPrice) {
+        this.closingPrice = closingPrice;
     }
 
     public Date getDate() {
         return date;
     }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     public CandleColor getColor() {
         return color;
     }
 
+    public void setColor(CandleColor color) {
+        this.color = color;
+    }
+
     public CandleType getType() {
         return type;
+    }
+
+    public void setType(CandleType type) {
+        this.type = type;
     }
 }
